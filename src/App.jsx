@@ -5,10 +5,7 @@ import {
 } from "react-router-dom";
 
 // components
-
-import ProtectedRoutes from "./components/ProtectedRoutes";
-
-// layouts
+import ProtectedRoutes from "./components/ProtectedRoutes"; // layouts
 import MainLayout from "./layout/MainLayout";
 
 // pages
@@ -19,13 +16,14 @@ import SingleProduct from "./components/SingleProduct";
 import Singup from "./pages/Singup";
 import Login from "./pages/Login";
 
+
 export default function App() {
-  const user = true;
+  const user = false;
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        <ProtectedRoutes user={true}>
+        <ProtectedRoutes user={user}>
           <MainLayout />
         </ProtectedRoutes>
       ),
